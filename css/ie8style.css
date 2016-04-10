@@ -1,0 +1,39 @@
+.ie8 .container
+{
+    width: 1000px!important;
+	margin: auto!important;
+}
+.ie8 input {
+	display: inline-block!important;
+}
+
+.ie8 input+label:before {
+	display:none!important;
+}
+.ie8 .main-articles-title {
+	background: #404040;
+}
+.ie8 .gallery-shadow{
+	background: #404040;
+}
+.ie8 .search-row input[type=submit] {
+	height: 34px;
+}
+.ie8 .project-row a
+ {	 
+    padding: 28px 30px!important;
+	float: left;
+}
+.ie8 .project-row a span {
+	display: inline-block;
+}
+.ie8 .project-row img {
+    border: 2px solid grey;
+}
+.ie8 .cat-line .tab-item {
+	border:1px solid grey;
+	margin: 5px;
+}
+.ie8 .tab-shadow{
+	background: #404040;
+}

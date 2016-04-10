@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BRUS</title>
+<link href="favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<body>
+<!-- IE FIX -->
+<script type="text/javascript">
+//if(Function('/*@cc_on return document.documentMode===10@*/')()){ $("html").addClass("ie9"); }
+    </script>
+<!--[if IE 8]><div class="ie8 ie9 ie10"><![endif]--> 
+<!--[if IE 9]><div class="ie9 ie10"><![endif]--> 
+
+<!--[if gte IE 10]><div class="ie10"><![endif]--> 
+<!-- END IE FIX -->
+
+<!-- HEADER -->
+<div class="fluid-container header-logo">
+	<div class="container">
+		<div class="row right"><div class="col-xs-12">
+	<!-- FORM -->
+			<a href="/"><img src="images/logo.png"/></a>
+			<div class="header-form">
+				<p>8 (960) 204-15-79</p>
+				<a href="#" class="after-up" id="open-header-form" >Обратный звонок</a>
+				<form id="header-form" class="none">
+					<input type="text" name="callback" placeholder="Ваш телефон"/>
+					<input type="submit" value="Позвоните мне!" class="button-green"/>
+				</form>
+			</div>
+	<!-- END FORM -->
+		</div></div>
+	</div>
+</div>
+	<!-- MENU -->
+<div class="menu-wrap">
+		<!-- MAIN LINE -->
+	<div class="fluid-container menu-row">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="#" class="search-button" id="search-button-main"></a>
+					<ol>
+						<li><a href="#">Главная</a></li>
+						<li><a href="#" id="project-button" class="has-submenu">Проекты</a></li>
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Галерея</a></li>
+						<li><a href="#">Вакансии</a></li>
+					</ol>
+				</div>
+			</div>		
+		</div>
+	</div>
+	<!-- PROJECT LINE -->
+	<div class="fluid-container project-row none" id="project-line-main">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<ol>
+						<li><a href="#"><img src="images/proj1.png"/><span>Дома</span></a></li>
+						<li><a href="#"><img src="images/proj2.png"/><span>Бани</span></a></li>
+						<li><a href="#"><img src="images/proj3.png"/><span>Фундаменты</span></a></li>
+						<li><a href="#"><img src="images/proj4.png"/><span>Летние кухни</span></a></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SEARCH LINE -->
+	<div class="fluid-container search-row none" id="search-main-line">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<input type="text" name="search"/>
+					<input type="submit" value ="поиск" class="button-grey"/>
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+	<!-- END MENU -->
+<!-- END HEADER -->
+<!-- FIX-MENU -->
+<div class="fix-menu none">
+	<div class="fluid-container menu-row">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="button-menu"></div>
+					<div class="fix-menu-right">
+						<a href="#callback-popup" class="callback-popup">Обратный звонок</a>
+						<span>8 (960) 204-15-79</span>
+					</div>
+					<div class="fix-text">
+						<a href="/"></a>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>
+	<!-- ITEM LINE -->
+	<div class="fluid-container items-row none">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 menu-row">
+					<ol>
+						<li><a href="#">Главная</a></li>
+						<li><a href="#" id="project-button-fix" class="has-submenu">Проекты</a></li>
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Галерея</a></li>
+						<li><a href="#">Вакансии</a></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- PROJECT LINE -->
+	<div class="fluid-container project-row none">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<ol>
+						<li><a href="#"><img src="images/proj1.png"/><span>Дома</span></a></li>
+						<li><a href="#"><img src="images/proj2.png"/><span>Бани</span></a></li>
+						<li><a href="#"><img src="images/proj3.png"/><span>Фундаменты</span></a></li>
+						<li><a href="#"><img src="images/proj4.png"/><span>Летние кухни</span></a></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END FIX-MENU -->
+<!-- BREADCRUMBS -->
+<div class="container breadcrumbs">
+	<div class="row">
+		<div class="col-xs-12">
+			<a href="#">Главная</a>
+			<span class="bread-separate"></span>
+			<a href="#">Каталог</a>
+			<span class="bread-separate"></span>
+			<span class="bread-current">Проекты домов</span>
+		</div>
+	</div>
+	
+</div>
+<!-- END OF BREADCRUMBS -->
+<!-- START 2 COLUMNS -->
+<div class="container content project">
+	<div class="row"><div class="col-xs-12">
+		<div class="project-title">Проект д-47</div>
+	<!-- LEFT COLUMN -->
+		<div class="main-left">
+		<!-- PHOTO -->
+			<div class="project-gal">
+				<a href="images/dom1.png" class="fancy project-image">
+					<img src="images/dom1.png"/>
+				</a>
+				<div class="thumbn">
+					<a href="images/tab1.png">
+						<img src="images/tab1.png"/>
+					</a>
+					<a href="images/tab2.png">
+						<img src="images/tab2.png"/>
+					</a>
+					<a href="images/tab3.png">
+						<img src="images/tab3.png"/>
+					</a>				
+				</div>
+			</div>
+		<!-- PLAN -->
+			<div class="plan">
+				<div class="plan-title">Планировка:</div>
+				<a href="images/plan.png" class="fancy">
+					<img src="images/plan.png"/>
+				</a>
+			</div>
+		</div>
+	<!-- END OF LEFT COLUMN -->
+	<!-- RIGHT COLUMN -->
+		<div class="main-right">
+		<!-- OPTIONS -->
+			<div class="navik">
+				<span class="nav-left">Предыдущий</span>
+				<a href="#" class="nav-right">Следующий</a>
+			</div>
+			<div class="option-title">
+				Общие хар-ки
+			</div>
+			<div class="option-size">
+				<span class="tab-size">10x12 м</span>
+				<span class="tab-square">123 м<sup>2</sup></span>
+			</div>
+			<div class="option-items">
+				<p><b>Материал:</b> брус</p>
+				<p><b>Этажность:</b> 1этаж + мансарда</p>
+				<p><b>Особенности:</b> терасса, балкон, сауна, гараж</p>
+				<p><b>Срок строительства:</b> 14 дней</p>
+			</div>
+			<div class="option-list">
+				<div class="spih">
+					<div>Летняя комплектация</div>
+					<ul class="spih-t none">
+						<li>Летняя комплектация</li>
+						<!-- in this item text, which will be in .spih>div after click on previos li. -->
+						<li class="none">1 300 000<span class="rubl">a</span></li>
+						<li>Зимняя комплектация</li>
+						<li class="none">1 400 000<span class="rubl">a</span></li>
+						<li>Осенняя комплектация</li>
+						<li class="none">1 500 000<span class="rubl">a</span></li>
+						<li>Весенняя комплектация</li>
+						<li class="none">1 600 000<span class="rubl">a</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="option-price">
+				<div class="supe">1 500 000</div>
+				<div id="price" class="price">1 300 000 <span class="rubl">a</span></div>
+			</div>
+			<div class="option-submit">
+				<input type="button" class="button-green" value="Оставить заявку"/>
+			</div>
+		<!-- END OPTIONS -->
+		<!-- BANNER -->
+			<a href="#" class="banner">
+				<img src="images/ban1.png"/>
+			</a>
+		<!-- LIST -->
+			<div class="main-list">
+				<div class="main-list-title">
+					Важно знать
+				</div>
+				<ul>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">Документация</a></li>
+					<li><a href="#">Процесс строительства</a></li>
+					<li><a href="#">Отзывы</a></li>
+				</ul>
+			</div>
+		</div>
+
+	<!-- END OF RIGHT COLUMN -->
+	</div></div>
+</div>
+<!-- END 2 COLUMNS -->
+<!-- TABLE -->
+<div class="container comp">
+	<!-- TITLE -->
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="comp-title">
+				Лучшие проекты
+			</div>
+		</div>
+	</div>
+	<!-- HEADER OF TABS -->
+	<div class="row">
+		<div class="col-xs-12">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#house" data-toggle="tab">Замний Вариант</a></li>
+					<li><a href="#bath" data-toggle="tab">Каркас</a></li>
+				<li><a href="#base" data-toggle="tab">Летний Вариант</a></li>
+				<li><a href="#kitchen" data-toggle="tab">Под Усадку</a></li>
+			</ul>
+			<div class="tab-content">
+				<!-- TAB#1 -->
+				<div class="tab-pane fade in active" id="house">
+					<div class="comp-price">
+						<div class="comp-price-title">Цена дома</div>
+						<div class="supe">1 500 000</div>
+						<div id="price"  class="price">1 300 000 <span class="rubl">a</span></div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Наружные стены из бруса
+						</div>
+						<div class="comp-2">
+							100 x 150 мм | 150 x 150 мм
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Два нижних венца — обрезной брус
+						</div>
+						<div class="comp-2">
+							100 x 150 мм | 150 x 150 мм
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Сборка угловых соединений бруса
+						</div>
+						<div class="comp-2">
+							В полдерева, для утепления пазов прокладывается льноволокно Дополнительное утепление
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Высота потолка
+						</div>
+						<div class="comp-2">
+							В чистоте; 1 -го этажа -2.45 м, 2-го этажа 2.3 м
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Лаги пола, потолка
+						</div>
+						<div class="comp-2">
+							Брус 50х150 мм через 60 см
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Черновой пол
+						</div>
+						<div class="comp-2">
+							Брус 50х150 мм через 60 см
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Перегородки 1 этажа
+						</div>
+						<div class="comp-2">
+							Брус профилированный 100х150 мм
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Стропила
+						</div>
+						<div class="comp-2">
+							Брус 50х150 мм с брусом 50х100 через 1.0 м
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Стропила
+						</div>
+						<div class="comp-2">
+							Доска 20х100 мм через 20-25 см
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Фронтоны, свесы
+						</div>
+						<div class="comp-2">
+							Оббиваются сухой вагонкой
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Кровля
+						</div>
+						<div class="comp-2">
+							Ондулин красного, зеленого или коричневого 
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+				</div>
+				<!-- TAB#2 -->
+				<div class="tab-pane fade" id="bath">
+					
+				</div>
+				<!-- TAB#3 -->
+				<div class="tab-pane fade" id="base">
+					
+				</div>
+				<!-- TAB#4 -->
+				<div class="tab-pane fade" id="kitchen">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- END OF TABLE -->
+<!-- FORM -->
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+		<div class="h3">Оставьте заявку на этот проект:</div>
+			<div class="form proj">
+				<form class="forma">
+					<div class="form-line">
+						<span><input placeholder="Ваше имя" type="text"/><input placeholder="Ваш телефон" type="text"/></span>
+					</div>
+					<div class="form-line">
+						<span><textarea placeholder="Сообщение" type="text"></textarea></span>
+					</div>							
+					<div class="form-line">
+						<span class="form-info">
+							<i>Мы не передаем информацию третьим лицам</i>
+						</span>
+						<span  class="form-submit" ><input type="submit" value="Оставить заявку" class="button-green"/></span>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END OF FORM -->
+<!-- FOOTER -->
+<div class="fluid-container footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="footer-1">
+					<div class="li"></div>
+					© 2015 СК “Брусмонтаж”
+					<a href="http://kuratov.ru"><span>Разработка сайта:</span><br>kuratov.ru</a>
+				</div>
+				<div class="footer-2">
+					<div class="footer-title">
+						Мы в интернете:
+					</div>
+					<p class="footer-grey">
+						Пишите нам на почту: <br><a href="mailto://brusmontazh@yandex.ru">brusmontazh@yandex.ru</a>
+					</p>
+					<p class="footer-grey soc">
+						Наши страницы в соц. сетях: <br/>
+						<a href="#" class="vk"></a>
+						<a href="#" class="fb"></a>
+					</p>
+				</div>
+				<div class="footer-3">
+					<div class="footer-title">
+						Производственная база:
+					</div>
+					<b>8 (960) 204-15-79</b><br/>
+					<p class="footer-grey">
+						Новгородская обл., г. Пестово, ул.Лермонтова
+					</p>
+				</div>
+				<div class="footer-4">
+					<div class="footer-title">
+						Офис в Рыбинске:
+					</div>
+					<b>8(930)1180570 </b> - Николай<br/>
+					г. Рыбинск, ул.Боткина, 5<br/>
+					Звоните при посещении офиса заранее по телефону: <br/> 
+					<b>8(960)206-15-69</b>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END FOOTER -->
+<!-- POPUP CALLBACK -->
+<div id="callback-popup" class="callback-popup-wrap" style="display:none">
+	<div>Заказать обратный <b>звонок!</b></div>
+	<p>маленький текст</p>
+	<form id="popup-form">
+		<input type="text" name="callback" placeholder="Ваш email"/>
+		<input type="submit" value="Позвоните мне!" class="button-red"/>
+	</form>
+</div>
+<!-- END COLLBACK POPUP -->
+<!-- RIGHT MENU -->
+<div class="right-menu none" id="r-menu">
+	<a href="#" class="r-m-item">
+		Расчет дома
+	</a>
+	<a href="#"  class="r-m-item">
+		Каталог
+	</a>
+	<a href="#"  class="r-m-item">
+		Отзывы
+	</a>
+	<a href="#"  class="r-m-item">
+		Вопрос-ответ
+	</a>
+</div>
+<!-- END OF RIGHT MENU -->
+<script src="js/script.js"></script>
+<!--[if gte IE 8]>
+</div><![endif]--> 
+</body>
+

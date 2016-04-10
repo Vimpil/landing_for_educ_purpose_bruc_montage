@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BRUS</title>
+<link href="favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.js"></script>
+
+
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.easing.compatibility.js"></script>
+
+
+	<link rel="stylesheet" href="js/jquery-ui-1.11.4/jquery-ui.min.css">
+	<script src="js/jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+
+	<script src="js/timer.jquery-master/libs/jqueryTimer.js" type="text/javascript"></script>
+	<script src="js/timer.jquery-master/src/timer.jquery.js"></script>
+
+
+<script src="js/gal.js"></script>
+<script src="js/up_float_menu.js"></script>
+</head>
+<body>
+<!-- IE FIX -->
+<script type="text/javascript">
+//if(Function('/*@cc_on return document.documentMode===10@*/')()){ $("html").addClass("ie9"); }
+    </script>
+<!--[if IE 8]><div class="ie8 ie9 ie10"><![endif]--> 
+<!--[if IE 9]><div class="ie9 ie10"><![endif]-->
+<!--[if gte IE 10]><div class="ie10"><![endif]--> 
+<!-- END IE FIX -->
+
+<!-- HEADER -->
+<div class="fluid-container header-logo">
+	<div class="container">
+		<div class="row right"><div class="col-xs-12">
+			<!-- FORM -->
+			<a href="/"><img src="images/logo.png"/></a>
+			<div class="header-form">
+				<p>8 (960) 204-15-79</p>
+				<a href="#" class="after-up" id="open-header-form" >Обратный звонок</a>
+				<form id="header-form" class="none">
+					<input type="text" name="callback" placeholder="Ваш телефон"/>
+					<input type="submit" value="Позвоните мне!" class="button-green"/>
+				</form>
+			</div>
+			<!-- END FORM -->
+		</div></div>
+	</div>
+</div>
+<!-- MENU -->
+<div class="menu-wrap">
+	<!-- MAIN LINE -->
+	<div class="fluid-container menu-row">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<a href="#" class="search-button" id="search-button-main"></a>
+					<ol>
+						<li><a href="#">Главная</a></li>
+						<li><a href="#" id="project-button" class="has-submenu">Проекты</a></li>
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Галерея</a></li>
+						<li><a href="#">Вакансии</a></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- PROJECT LINE -->
+	<div class="fluid-container project-row none" id="project-line-main">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<ol>
+						<li><a href="#"><img src="images/proj1.png"/><span>Дома</span></a></li>
+						<li><a href="#"><img src="images/proj2.png"/><span>Бани</span></a></li>
+						<li><a href="#"><img src="images/proj3.png"/><span>Фундаменты</span></a></li>
+						<li><a href="#"><img src="images/proj4.png"/><span>Летние кухни</span></a></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- SEARCH LINE -->
+	<div class="fluid-container search-row none" id="search-main-line">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<input type="text" name="search"/>
+					<input type="submit" value ="поиск" class="button-grey"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END MENU -->
+<!-- END HEADER -->
+<!-- FIX-MENU -->
+<div class="fix-menu none">
+	<div class="fluid-container menu-row">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="button-menu"></div>
+					<div class="fix-menu-right">
+						<a href="#callback-popup" class="callback-popup">Обратный звонок</a>
+						<span>8 (960) 204-15-79</span>
+					</div>
+					<div class="fix-text">
+						<a href="/"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ITEM LINE -->
+	<div class="fluid-container items-row none">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 menu-row">
+					<ol>
+						<li><a href="#">Главная</a></li>
+						<li><a href="#" id="project-button-fix" class="has-submenu">Проекты</a></li>
+						<li><a href="#">Акции</a></li>
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Галерея</a></li>
+						<li><a href="#">Вакансии</a></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- PROJECT LINE -->
+	<div class="fluid-container project-row none">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<ol>
+						<li><a href="#"><img src="images/proj1.png"/><span>Дома</span></a></li>
+						<li><a href="#"><img src="images/proj2.png"/><span>Бани</span></a></li>
+						<li><a href="#"><img src="images/proj3.png"/><span>Фундаменты</span></a></li>
+						<li><a href="#"><img src="images/proj4.png"/><span>Летние кухни</span></a></li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END FIX-MENU -->
+<!-- BEST PROJECTS -->
+<div class="fluid-container best-projects">
+	<div class="container">
+		<!-- TITLE -->
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="h1">
+					Лучшие проекты
+				</div>
+			</div>
+		</div>
+		<!-- HEADER OF TABS -->
+		<div class="row">
+			<div class="col-xs-12">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#house" data-toggle="tab">Дома</a></li>
+					<li><a href="#bath" data-toggle="tab">Бани</a></li>
+					<li><a href="#base" data-toggle="tab">Фундаменты</a></li>
+					<li><a href="#kitchen" data-toggle="tab">Летние Кухни</a></li>
+				</ul>
+				<div class="tab-content">
+					<!-- TAB#1 -->
+					<div class="tab-pane fade in active" id="house">
+						<div class="tab-slider">
+							<ul class="slides">
+								<li>
+									<div class="tab-item">
+										<a href="#">
+											<img src="images/dom1.png"/>
+											<div class="tab-title">Проект Д-471</div>
+											<div class="tab-discr">
+												<div class="tab-price">
+													от <div class="supe">1 500 000</div>
+													<b>1 300 000 <span class="rubl">a</span></b>
+													<div class="oppa"></div>
+												</div>
+												<span class="tab-size">10x12 м</span>
+												<span class="tab-square">123 м<sup>2</sup></span>
+											</div>
+											<div class="tab-shadow">
+												<div></div>
+												<p>Перейти к проекту</p>
+											</div>
+										</a>
+									</div>
+									<div class="tab-item">
+										<a href="#">
+											<img src="images/dom1.png"/>
+											<div class="tab-title">Проект Д-472</div>
+											<div class="tab-discr">
+												<div class="tab-price">
+													от <b>1 300 000 <span class="rubl">a</span></b>
+												</div>
+												<span class="tab-size">10x12 м</span>
+												<span class="tab-square">123 м<sup>2</sup></span>
+											</div>
+											<div class="tab-shadow">
+												<div></div>
+												<p>Перейти к проекту</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="tab-item">
+										<a href="#">
+											<img src="images/dom1.png"/>
+											<div class="tab-title">Проект Д-473</div>
+											<div class="tab-discr">
+												<div class="tab-price">
+													от <div class="supe">1 500 000</div>
+													<b>1 300 000 <span class="rubl">a</span></b>
+													<div class="oppa"></div>
+												</div>
+												<span class="tab-size">10x12 м</span>
+												<span class="tab-square">123 м<sup>2</sup></span>
+											</div>
+											<div class="tab-shadow">
+												<div></div>
+												<p>Перейти к проекту</p>
+											</div>
+										</a>
+									</div>
+									<div class="tab-item">
+										<a href="#">
+											<img src="images/dom1.png"/>
+											<div class="tab-title">Проект Д-474</div>
+											<div class="tab-discr">
+												<div class="tab-price">
+													от <div class="supe">1 500 000</div>
+													<b>1 300 000 <span class="rubl">a</span></b>
+													<div class="oppa"></div>
+												</div>
+												<span class="tab-size">10x12 м</span>
+												<span class="tab-square">123 м<sup>2</sup></span>
+											</div>
+											<div class="tab-shadow">
+												<div></div>
+												<p>Перейти к проекту</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<div class="clearfix"></div>
+							</ul>
+							<div class="tab-direction">
+								<div class="tab-prev"></div>
+								<div class="tab-next"></div>
+							</div>
+						</div>
+					</div>
+					<!-- TAB#2 -->
+					<div class="tab-pane fade" id="bath">
+						<div class="tab-slider">
+							<ul class="slides">
+								<li>
+									<div class="tab-item">
+										<a href="#">
+											<img src="images/dom1.png"/>
+											<div class="tab-title">Проект Д-475</div>
+											<div class="tab-discr">
+												<div class="tab-price">
+													от <div class="supe">1 500 000</div>
+													<b>1 300 000 <span class="rubl">a</span></b>
+													<div class="oppa"></div>
+												</div>
+												<span class="tab-size">10x12 м</span>
+												<span class="tab-square">123 м<sup>2</sup></span>
+											</div>
+											<div class="tab-shadow">
+												<div></div>
+												<p>Перейти к проекту</p>
+											</div>
+										</a>
+									</div>
+									<div class="tab-item">
+										<a href="#">
+											<img src="images/dom1.png"/>
+											<div class="tab-title">Проект Д-476</div>
+											<div class="tab-discr">
+												<div class="tab-price">
+													от <b>1 300 000 <span class="rubl">a</span></b>
+												</div>
+												<span class="tab-size">10x12 м</span>
+												<span class="tab-square">123 м<sup>2</sup></span>
+											</div>
+											<div class="tab-shadow">
+												<div></div>
+												<p>Перейти к проекту</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="tab-item">
+										<a href="#">
+											<img src="images/dom1.png"/>
+											<div class="tab-title">Проект Д-477</div>
+											<div class="tab-discr">
+												<div class="tab-price">
+													от <div class="supe">1 500 000</div>
+													<b>1 300 000 <span class="rubl">a</span></b>
+													<div class="oppa"></div>
+												</div>
+												<span class="tab-size">10x12 м</span>
+												<span class="tab-square">123 м<sup>2</sup></span>
+											</div>
+											<div class="tab-shadow">
+												<div></div>
+												<p>Перейти к проекту</p>
+											</div>
+										</a>
+									</div>
+									<div class="tab-item">
+										<a href="#">
+											<img src="images/dom1.png"/>
+											<div class="tab-title">Проект Д-478</div>
+											<div class="tab-discr">
+												<div class="tab-price">
+													от <div class="supe">1 500 000</div>
+													<b>1 300 000 <span class="rubl">a</span></b>
+													<div class="oppa"></div>
+												</div>
+												<span class="tab-size">10x12 м</span>
+												<span class="tab-square">123 м<sup>2</sup></span>
+											</div>
+											<div class="tab-shadow">
+												<div></div>
+												<p>Перейти к проекту</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<div class="clearfix"></div>
+							</ul>
+							<div class="tab-direction">
+								<div class="tab-prev"></div>
+								<div class="tab-next"></div>
+							</div>
+						</div>
+					</div>
+					<!-- TAB#3 -->
+					<div class="tab-pane fade" id="base">
+						<div class="tab-slider">
+							<ul class="slides">
+								<li>
+									<div class="tab-item">
+										<a href="#">
+											<img src="images/dom1.png"/>
+											<div class="tab-title">Проект Д-479</div>
+											<div class="tab-discr">
+												<div class="tab-price">
+													от <div class="supe">1 500 000</div>
+													<b>1 300 000 <span class="rubl">a</span></b>
+													<div class="oppa"></div>
+												</div>
+												<span class="tab-size">10x12 м</span>
+												<span class="tab-square">123 м<sup>2</sup></span>
+											</div>
+											<div class="tab-shadow">
+												<div></div>
+												<p>Перейти к проекту</p>
+											</div>
+										</a>
+									</div>
+									<div class="tab-item">
+										<a href="#">
+											<img src="images/dom1.png"/>
+											<div class="tab-title">Проект Д-470</div>
+											<div class="tab-discr">
+												<div class="tab-price">
+													от <b>1 300 000 <span class="rubl">a</span></b>
+												</div>
+												<span class="tab-size">10x12 м</span>
+												<span class="tab-square">123 м<sup>2</sup></span>
+											</div>
+											<div class="tab-shadow">
+												<div></div>
+												<p>Перейти к проекту</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="tab-item">
+										<a href="#">
+											<img src="images/dom1.png"/>
+											<div class="tab-title">Проект Д-4722</div>
+											<div class="tab-discr">
+												<div class="tab-price">
+													от <div class="supe">1 500 000</div>
+													<b>1 300 000 <span class="rubl">a</span></b>
+													<div class="oppa"></div>
+												</div>
+												<span class="tab-size">10x12 м</span>
+												<span class="tab-square">123 м<sup>2</sup></span>
+											</div>
+											<div class="tab-shadow">
+												<div></div>
+												<p>Перейти к проекту</p>
+											</div>
+										</a>
+									</div>
+									<div class="tab-item">
+										<a href="#">
+											<img src="images/dom1.png"/>
+											<div class="tab-title">Проект Д-4733</div>
+											<div class="tab-discr">
+												<div class="tab-price">
+													от <div class="supe">1 500 000</div>
+													<b>1 300 000 <span class="rubl">a</span></b>
+													<div class="oppa"></div>
+												</div>
+												<span class="tab-size">10x12 м</span>
+												<span class="tab-square">123 м<sup>2</sup></span>
+											</div>
+											<div class="tab-shadow">
+												<div></div>
+												<p>Перейти к проекту</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<div class="clearfix"></div>
+							</ul>
+							<div class="tab-direction">
+								<div class="tab-prev"></div>
+								<div class="tab-next"></div>
+							</div>
+						</div>
+					</div>
+					<!-- TAB#4 -->
+					<div class="tab-pane fade" id="kitchen">
+						<div class="tab-slider">
+							<ul class="slides">
+								<li>
+									<div class="tab-item">
+										<a href="#">
+											<img src="images/dom1.png"/>
+											<div class="tab-title">Проект Д-4744</div>
+											<div class="tab-discr">
+												<div class="tab-price">
+													от <div class="supe">1 500 000</div>
+													<b>1 300 000 <span class="rubl">a</span></b>
+													<div class="oppa"></div>
+												</div>
+												<span class="tab-size">10x12 м</span>
+												<span class="tab-square">123 м<sup>2</sup></span>
+											</div>
+											<div class="tab-shadow">
+												<div></div>
+												<p>Перейти к проекту</p>
+											</div>
+										</a>
+									</div>
+									<div class="tab-item">
+										<a href="#">
+											<img src="images/dom1.png"/>
+											<div class="tab-title">Проект Д-4755</div>
+											<div class="tab-discr">
+												<div class="tab-price">
+													от <b>1 300 000 <span class="rubl">a</span></b>
+												</div>
+												<span class="tab-size">10x12 м</span>
+												<span class="tab-square">123 м<sup>2</sup></span>
+											</div>
+											<div class="tab-shadow">
+												<div></div>
+												<p>Перейти к проекту</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<li>
+									<div class="tab-item">
+										<a href="#">
+											<img src="images/dom1.png"/>
+											<div class="tab-title">Проект Д-4766</div>
+											<div class="tab-discr">
+												<div class="tab-price">
+													от <div class="supe">1 500 000</div>
+													<b>1 300 000 <span class="rubl">a</span></b>
+													<div class="oppa"></div>
+												</div>
+												<span class="tab-size">10x12 м</span>
+												<span class="tab-square">123 м<sup>2</sup></span>
+											</div>
+											<div class="tab-shadow">
+												<div></div>
+												<p>Перейти к проекту</p>
+											</div>
+										</a>
+									</div>
+									<div class="tab-item">
+										<a href="#">
+											<img src="images/dom1.png"/>
+											<div class="tab-title">Проект Д-4777</div>
+											<div class="tab-discr">
+												<div class="tab-price">
+													от <div class="supe">1 500 000</div>
+													<b>1 300 000 <span class="rubl">a</span></b>
+													<div class="oppa"></div>
+												</div>
+												<span class="tab-size">10x12 м</span>
+												<span class="tab-square">123 м<sup>2</sup></span>
+											</div>
+											<div class="tab-shadow">
+												<div></div>
+												<p>Перейти к проекту</p>
+											</div>
+										</a>
+									</div>
+								</li>
+								<div class="clearfix"></div>
+							</ul>
+							<div class="tab-direction">
+								<div class="tab-prev"></div>
+								<div class="tab-next"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END BEST PROJECTS -->
+<!-- START 2 COLUMNS -->
+<div class="container content">
+	<div class="row"><div class="col-xs-12">
+		<!-- LEFT COLUMN -->
+		<div class="main-left">
+			<!-- MAP -->
+			<div class="main-map">
+				<div class="map-title">
+					Мы строим везде!
+				</div>
+				<div class="map-number">
+					<div class="map-number-block">
+						<span>68</span>
+						<p>Объектов построено</p>
+					</div>
+					<div class="map-number-separate">в</div>
+					<div class="map-number-block">
+						<span>4</span>
+						<p>Регионах России</p>
+					</div>
+				</div>
+				<div class="map-obl">
+					<span>Ярославская область<br/>Новгородская область</span>
+					<span>Ленинградская область<br/>Московская область</span>
+				</div>
+			</div>
+			<!-- TEXT -->
+			<div class="main-text-title">
+				Постройте дом и баню своей мечты
+			</div>
+			<div class="main-text">
+				<p>
+					Любой здравомыслящий человек мечтает о красивом, уютном доме в живописном местечке за городом, который можно использовать для сезонного или постоянного проживания. Стоит уточнить, что какими бы прекрасными ни были загородные дома на вторичном рынке жилья, они не могут в полной мере моответствовать всем требованиям будущего домовладельца. Заказав строительство деревянных каркасных домов под ключ в Ярославле у нас, Вы станете владельцем идеального строения, которое устроит Вас по всем параметрам. Вы лично сможете выбрать проект будущего дома и, если необходимо, принять непосредственное участие в процессе его корректировки.
+				</p>
+			</div>
+			<!-- CHOOSE -->
+			<div class="main-choose">
+				<div class="choose-title">
+					Выбирая нас, вы получаете:
+				</div>
+				<div class="choose-item">
+					<img src="images/mainfr1.png"/>
+					<p><b>Надежного исполнителя</b>Мы работаем без предоплаты и без посредников</p>
+				</div>
+				<div class="choose-item">
+					<img src="images/mainfr1.png"/>
+					<p><b>Качественные материалы</b>У нас есть собственная сырьевая база. Мы закупаем только проверенные материалы, а также используем полы и вагонку камерной сушки</p>
+				</div>
+				<div class="choose-item">
+					<img src="images/mainfr1.png"/>
+					<p><b>Удобство и гибкость</b>Доставка включена в стоимость. Мы работаем по индивидуальным проектам и готовы внести изменения в уже готовые проекты, по вашему желанию.</p>
+				</div>
+
+			</div>
+			<!-- TEXT -->
+			<div class="main-text">
+				<p>Строительство деревянных <a href="#">каркасных домов</a> под ключ в Ярославле — это крайне важная, сложная и ответственная работа, которая требует богатого опыта и высокого профессионализма. Мы готовы выполнить работу любой сложности с максимально высокими результатами и гарантируем отличное качество всех построек. Качество готового дома зависит от многочисленных факторов, таких как выбор строительного материала, разработка проекта, профессиональный уровень архитекторов и строителей. Почему стоит заказать строительство деревянных каркасных домов под ключ в Ярославле у нас? Потому, что мы работаем честно, профессионально и оперативно!</p>
+				<p>
+					За последние несколько лет деревянное домостроение очень часто сопровождается возведением бани на загородном участке. Мы также осуществляем строительство бань под ключ в Ярославле на выгодных условиях. Если Вы считаете, что возведение бани Вам не по карману и что строительство может затянуться на несколько лет, то обратитесь в компанию "БрусМонтаж". Мы развеем все Ваши сомнения! Закажите строительство бань под ключ в Ярославле — сделайте шаг на встрече счастливому и беззаботному будущему!
+				</p>
+			</div>
+		</div>
+		<!-- END OF LEFT COLUMN -->
+		<!-- RIGHT COLUMN -->
+		<div class="main-right">
+			<!-- BANNER -->
+			<a href="#" class="banner">
+				<img src="images/ban1.png"/>
+			</a>
+			<!-- LIST -->
+			<div class="main-list">
+				<div class="main-list-title">
+					Важно знать
+				</div>
+				<ul>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">Документация</a></li>
+					<li><a href="#">Процесс строительства</a></li>
+					<li><a href="#">Отзывы</a></li>
+				</ul>
+			</div>
+			<!-- ARTICLES -->
+			<div class="main-right-slide main-articles">
+				<ul class="slides">
+					<li>
+						<a href="#">
+							<div class="main-articles-title">
+								Строительство дом1а из бруса под ключ
+							</div>
+							<img src="images/dom2.png"/>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="main-articles-title">
+								Строительство до2ма из бруса под ключ
+							</div>
+							<img src="images/dom2.png"/>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="main-articles-title">
+								Строительство до3ма из бруса под ключ
+							</div>
+							<img src="images/dom2.png"/>
+						</a>
+					</li>
+					<div class="clearfix"></div>
+				</ul>
+				<div class="main-articles-buttons">
+					<div class="art-right"></div>
+					<div class="art-left"></div>
+					<a href="#">Все статьи</a>
+				</div>
+
+			</div>
+			<!-- WORKS -->
+			<div class="main-list">
+				<div class="main-list-title">
+					Наши работы:
+				</div>
+			</div>
+			<div class="main-right-slide main-works">
+				<ul class="slides">
+					<li>
+						<a href="#">
+							<div class="main-articles-title">
+								Строительство дома4 из бруса под ключ
+							</div>
+							<img src="images/dom2.png"/>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="main-articles-title">
+								Строительство дома 5из бруса под ключ
+							</div>
+							<img src="images/dom2.png"/>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="main-articles-title">
+								Строительство дома 6из бруса под ключ
+							</div>
+							<img src="images/dom2.png"/>
+						</a>
+					</li>
+					<div class="clearfix"></div>
+				</ul>
+				<div class="main-articles-buttons">
+					<div class="art-right"></div>
+					<div class="art-left"></div>
+					<a href="#">В галерею</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- END OF RIGHT COLUMN -->
+	</div></div>
+</div>
+<!-- END 2 COLUMNS -->
+<!-- FOOTER -->
+<div class="fluid-container footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="footer-1">
+					<div class="li"></div>
+					© 2015 СК “Брусмонтаж”
+					<a href="http://kuratov.ru"><span>Разработка сайта:</span><br>kuratov.ru</a>
+				</div>
+				<div class="footer-2">
+					<div class="footer-title">
+						Мы в интернете:
+					</div>
+					<p class="footer-grey">
+						Пишите нам на почту: <br><a href="mailto://brusmontazh@yandex.ru">brusmontazh@yandex.ru</a>
+					</p>
+					<p class="footer-grey soc">
+						Наши страницы в соц. сетях: <br/>
+						<a href="#" class="vk"></a>
+						<a href="#" class="fb"></a>
+					</p>
+				</div>
+				<div class="footer-3">
+					<div class="footer-title">
+						Производственная база:
+					</div>
+					<b>8 (960) 204-15-79</b><br/>
+					<p class="footer-grey">
+						Новгородская обл., г. Пестово, ул.Лермонтова
+					</p>
+				</div>
+				<div class="footer-4">
+					<div class="footer-title">
+						Офис в Рыбинске:
+					</div>
+					<b>8(930)1180570 </b> - Николай<br/>
+					г. Рыбинск, ул.Боткина, 5<br/>
+					Звоните при посещении офиса заранее по телефону: <br/>
+					<b>8(960)206-15-69</b>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END FOOTER -->
+<!-- POPUP CALLBACK -->
+<div id="callback-popup" class="callback-popup-wrap" style="display:none">
+	<div>Заказать обратный <b>звонок!</b></div>
+	<p>маленький текст</p>
+	<form id="popup-form">
+		<input type="text" name="callback" placeholder="Ваш email"/>
+		<input type="submit" value="Позвоните мне!" class="button-red"/>
+	</form>
+</div>
+<!-- END COLLBACK POPUP -->
+<!-- RIGHT MENU -->
+<div class="right-menu none" id="r-menu">
+	<a href="#" class="r-m-item">
+		Расчет дома
+	</a>
+	<a href="#"  class="r-m-item">
+		Каталог
+	</a>
+	<a href="#"  class="r-m-item">
+		Отзывы
+	</a>
+	<a href="#"  class="r-m-item">
+		Вопрос-ответ
+	</a>
+</div>
+<!-- END OF RIGHT MENU -->
+<!--[if gte IE 8]>
+</div><![endif]-->
+<!-- TIMER FOR GALLARY -->
+<div id="timer"></div>
+<div id="timer2"></div>
+<div id="timer3"></div>
+<!-- END TIMER FOR GALLARY -->
+</body>
