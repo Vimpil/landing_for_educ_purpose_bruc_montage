@@ -5,13 +5,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BRUS</title>
 <link href="favicon.ico" rel="shortcut icon">
+
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-<link rel="stylesheet" href="fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
-<script src="js/jquery.flexslider-min.js"></script>
+
+	<!--Jquery from CDN-->
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+	<!--Global variables-->
+	<script type='text/javascript' >
+		var clicks_mid = 0;
+	</script>
+
+	<!--fancybox css + js -->
+	<script type="text/javascript" src="js/fancybox_options.js"></script>
+	<link rel="stylesheet" href="fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+
+	<!-- fancybox; jquery main library; bootstrap -->
+	<link rel="stylesheet" href="fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+	<!--flexslider plugin-->
+	<link rel="stylesheet" href="flexslider.css" type="text/css">
+	<script src="jquery.flexslider.js"></script>
+
+
+	<!--my javascripts-->
+
+	<script src="js/down_float_menu.js"></script>
+	<script src="js/smallform_open.js"></script>
+	<script src="js/up_float_menu.js"></script>
+	<script src="js/call_time.js"></script>
+	<script src="js/mid_menu_title.js"></script>
+	<script src="js/price_menu.js"></script>
+	<script src="js/projects_galary_mid.js"></script>
+
+
+	<!-- Place in the <head>, after the three links \\ flexslider-->
+	<script type="text/javascript" src="js/flexslider_options.js"></script>
+
+
+
 <body>
 <!-- IE FIX -->
 <script type="text/javascript">
@@ -51,7 +91,7 @@
 					<a href="#" class="search-button" id="search-button-main"></a>
 					<ol>
 						<li><a href="#">Главная</a></li>
-						<li><a href="#" id="project-button" class="has-submenu">Проекты</a></li>
+						<li><a href="##" id="project-button" class="has-submenu">Проекты</a></li>
 						<li><a href="#">Акции</a></li>
 						<li><a href="#">О компании</a></li>
 						<li><a href="#">Галерея</a></li>
@@ -164,20 +204,14 @@
 		<div class="main-left">
 		<!-- PHOTO -->
 			<div class="project-gal">
-				<a href="images/dom1.png" class="fancy project-image">
-					<img src="images/dom1.png"/>
-				</a>
-				<div class="thumbn">
-					<a href="images/tab1.png">
-						<img src="images/tab1.png"/>
-					</a>
-					<a href="images/tab2.png">
-						<img src="images/tab2.png"/>
-					</a>
-					<a href="images/tab3.png">
-						<img src="images/tab3.png"/>
-					</a>				
-				</div>
+				<ul>
+					<li class="main_gal_screen" value="images/tab1.png"> <img src="images/tab1.png" /></li>
+					<ul class="gal_small_icons">
+						<li value="images/tab1.png"> <img src="images/tab1.png" /> </li>
+						<li value="images/tab2.png"><img src="images/tab2.png" /></li>
+						<li value="images/tab3.png"><img src="images/tab3.png" /></li>
+					</ul>
+				</ul>
 			</div>
 		<!-- PLAN -->
 			<div class="plan">
@@ -210,23 +244,18 @@
 			</div>
 			<div class="option-list">
 				<div class="spih">
-					<div>Летняя комплектация</div>
-					<ul class="spih-t none">
-						<li>Летняя комплектация</li>
-						<!-- in this item text, which will be in .spih>div after click on previos li. -->
-						<li class="none">1 300 000<span class="rubl">a</span></li>
-						<li>Зимняя комплектация</li>
-						<li class="none">1 400 000<span class="rubl">a</span></li>
-						<li>Осенняя комплектация</li>
-						<li class="none">1 500 000<span class="rubl">a</span></li>
-						<li>Весенняя комплектация</li>
-						<li class="none">1 600 000<span class="rubl">a</span></li>
+					<div id="price_signboard">Летняя комплектация</div>
+					<ul class="price_list none">
+						<li value="1 300 000#1 500 000">Летняя комплектация</li>
+						<li value="1 400 000#1 800 000">Зимняя комплектация</li>
+						<li value="1 500 000#2 000 000">Осенняя комплектация</li>
+						<li value="1 600 000#2 300 000">Весенняя комплектация</li>
 					</ul>
 				</div>
 			</div>
 			<div class="option-price">
 				<div class="supe">1 500 000</div>
-				<div id="price" class="price">1 300 000 <span class="rubl">a</span></div>
+				<div class="price">1 300 000 <span class="rubl">a</span></div>
 			</div>
 			<div class="option-submit">
 				<input type="button" class="button-green" value="Оставить заявку"/>
@@ -276,6 +305,396 @@
 			<div class="tab-content">
 				<!-- TAB#1 -->
 				<div class="tab-pane fade in active" id="house">
+					<div class="comp-price">
+						<div class="comp-price-title">Цена дома</div>
+						<div class="supe">1 500 000</div>
+						<div class="price">1 300 000 <span class="rubl">a</span></div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Наружные стены из бруса
+						</div>
+						<div class="comp-2">
+							100 x 150 мм | 150 x 150 мм
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancyboxGal"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Два нижних венца — обрезной брус
+						</div>
+						<div class="comp-2">
+							100 x 150 мм | 150 x 150 мм
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancyboxGal"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Сборка угловых соединений бруса
+						</div>
+						<div class="comp-2">
+							В полдерева, для утепления пазов прокладывается льноволокно Дополнительное утепление
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancyboxGal"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Высота потолка
+						</div>
+						<div class="comp-2">
+							В чистоте; 1 -го этажа -2.45 м, 2-го этажа 2.3 м
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancyboxGal"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Лаги пола, потолка
+						</div>
+						<div class="comp-2">
+							Брус 50х150 мм через 60 см
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancyboxGal"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Черновой пол
+						</div>
+						<div class="comp-2">
+							Брус 50х150 мм через 60 см
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancyboxGal"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Перегородки 1 этажа
+						</div>
+						<div class="comp-2">
+							Брус профилированный 100х150 мм
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancyboxGal"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Стропила
+						</div>
+						<div class="comp-2">
+							Брус 50х150 мм с брусом 50х100 через 1.0 м
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancyboxGal"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Стропила
+						</div>
+						<div class="comp-2">
+							Доска 20х100 мм через 20-25 см
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancyboxGal"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Фронтоны, свесы
+						</div>
+						<div class="comp-2">
+							Оббиваются сухой вагонкой
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancyboxGal"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Кровля
+						</div>
+						<div class="comp-2">
+							Ондулин красного, зеленого или коричневого 
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancyboxGal"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+				</div>
+				<!-- TAB#2 -->
+				<div class="tab-pane fade" id="bath">
+
+					<div class="comp-price">
+						<div class="comp-price-title">Цена дома</div>
+						<div class="supe">1 500 000</div>
+						<div class="price">1 300 000 <span class="rubl">a</span></div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Наружные стены из бруса
+						</div>
+						<div class="comp-2">
+							100 x 150 мм | 150 x 150 мм
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Два нижних венца — обрезной брус
+						</div>
+						<div class="comp-2">
+							100 x 150 мм | 150 x 150 мм
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Сборка угловых соединений бруса
+						</div>
+						<div class="comp-2">
+							В полдерева, для утепления пазов прокладывается льноволокно Дополнительное утепление
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Высота потолка
+						</div>
+						<div class="comp-2">
+							В чистоте; 1 -го этажа -2.45 м, 2-го этажа 2.3 м
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Лаги пола, потолка
+						</div>
+						<div class="comp-2">
+							Брус 50х150 мм через 60 см
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Черновой пол
+						</div>
+						<div class="comp-2">
+							Брус 50х150 мм через 60 см
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Перегородки 1 этажа
+						</div>
+						<div class="comp-2">
+							Брус профилированный 100х150 мм
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Стропила
+						</div>
+						<div class="comp-2">
+							Брус 50х150 мм с брусом 50х100 через 1.0 м
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Стропила
+						</div>
+						<div class="comp-2">
+							Доска 20х100 мм через 20-25 см
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Фронтоны, свесы
+						</div>
+						<div class="comp-2">
+							Оббиваются сухой вагонкой
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Кровля
+						</div>
+						<div class="comp-2">
+							Ондулин красного, зеленого или коричневого
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+				</div>
+				<!-- TAB#3 -->
+				<div class="tab-pane fade" id="base">
+
+					<div class="comp-price">
+						<div class="comp-price-title">Цена дома</div>
+						<div class="supe">1 500 000</div>
+						<div class="price">1 300 000 <span class="rubl">a</span></div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Наружные стены из бруса
+						</div>
+						<div class="comp-2">
+							100 x 150 мм | 150 x 150 мм
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Два нижних венца — обрезной брус
+						</div>
+						<div class="comp-2">
+							100 x 150 мм | 150 x 150 мм
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Сборка угловых соединений бруса
+						</div>
+						<div class="comp-2">
+							В полдерева, для утепления пазов прокладывается льноволокно Дополнительное утепление
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Высота потолка
+						</div>
+						<div class="comp-2">
+							В чистоте; 1 -го этажа -2.45 м, 2-го этажа 2.3 м
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Лаги пола, потолка
+						</div>
+						<div class="comp-2">
+							Брус 50х150 мм через 60 см
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Черновой пол
+						</div>
+						<div class="comp-2">
+							Брус 50х150 мм через 60 см
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Перегородки 1 этажа
+						</div>
+						<div class="comp-2">
+							Брус профилированный 100х150 мм
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Стропила
+						</div>
+						<div class="comp-2">
+							Брус 50х150 мм с брусом 50х100 через 1.0 м
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Стропила
+						</div>
+						<div class="comp-2">
+							Доска 20х100 мм через 20-25 см
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Фронтоны, свесы
+						</div>
+						<div class="comp-2">
+							Оббиваются сухой вагонкой
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+					<div class="comp-line">
+						<div class="comp-1">
+							Кровля
+						</div>
+						<div class="comp-2">
+							Ондулин красного, зеленого или коричневого
+						</div>
+						<div class="comp-3">
+							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
+						</div>
+					</div>
+				</div>
+				<!-- TAB#4 -->
+				<div class="tab-pane fade" id="kitchen">
+
 					<div class="comp-price">
 						<div class="comp-price-title">Цена дома</div>
 						<div class="supe">1 500 000</div>
@@ -396,24 +815,12 @@
 							Кровля
 						</div>
 						<div class="comp-2">
-							Ондулин красного, зеленого или коричневого 
+							Ондулин красного, зеленого или коричневого
 						</div>
 						<div class="comp-3">
 							<a href="images/tab1.png" class="fancy"><img src="images/tab1.png"/></a>
 						</div>
 					</div>
-				</div>
-				<!-- TAB#2 -->
-				<div class="tab-pane fade" id="bath">
-					
-				</div>
-				<!-- TAB#3 -->
-				<div class="tab-pane fade" id="base">
-					
-				</div>
-				<!-- TAB#4 -->
-				<div class="tab-pane fade" id="kitchen">
-					
 				</div>
 			</div>
 		</div>
@@ -518,8 +925,6 @@
 	</a>
 </div>
 <!-- END OF RIGHT MENU -->
-<script src="js/script.js"></script>
 <!--[if gte IE 8]>
 </div><![endif]--> 
 </body>
-

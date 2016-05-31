@@ -1,6 +1,6 @@
-.ie8 .container
-{
-    width: 1000px!important;
+
+.ie8 .container{
+	width: 1000px!important;
 	margin: auto!important;
 }
 .ie8 input {
