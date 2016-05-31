@@ -871,7 +871,7 @@ ul {
     width: 24px;
     height: 16px;
     background: url(../images/sprite.png) -80px -19px;
-    margin-top: 12px;
+    margin-top: 13px;
     opacity: 0.5;
     float: right;
     cursor: pointer;
@@ -2372,7 +2372,7 @@ li.init { cursor: pointer; }
 }
 
 .projects_flex_gal.flex-direction-nav{
-    display: none;
+    display: block;
 }
 
 .main_gal_screen>img{
