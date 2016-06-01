@@ -1,8 +1,16 @@
 jQuery(document).ready(function () {
 
+//--------------upper_floating_menu-----------------------
+
+
   var p =$(".menu-row ol");
+
+//counting screen length to menu from the top
+
   var offset= p.offset();
   var amountScrolled = offset.top;
+
+//when scrolled amount bigger than position of row menu - float_menu become visible
 
   $(window).scroll(function() {
     if ( $(window).scrollTop() > amountScrolled){
@@ -16,6 +24,8 @@ jQuery(document).ready(function () {
   }
   })
 
+//show addit menu in click
+
   var clicks = 0;
 
   $( "div.button-menu" ).click(function() {
@@ -28,7 +38,9 @@ jQuery(document).ready(function () {
     }
   });
 
-  $( "body > div.fix-menu > div.fluid-container.menu-row > div > div > div > div.fix-menu-right > a" ).click(function() {
+//options for callback_popup fancybox
+
+  $( "a.callback-popup" ).click(function() {
 
     $(".callback-popup").fancybox({
       "wrapCSS": "call",
@@ -40,5 +52,8 @@ jQuery(document).ready(function () {
         }
       }
     })
-    })
+  })
+
+//--------------upper_floating_menu-----------------------
+
   })

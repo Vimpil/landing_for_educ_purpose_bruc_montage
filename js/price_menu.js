@@ -3,9 +3,16 @@
  */
 $(document).ready(function(){
 
+//--------------down_float_menu(project-line-main)-----------------------
+
+//clicks count
     var clicks=0;
+//variable for *last price*
     var supe;
+//variable for *today price*
     var price;
+
+//Opening and hiding on click price list
 
     $("#price_signboard").on("click",function(e) {
 
@@ -19,7 +26,8 @@ $(document).ready(function(){
         }
     });
 
-    var allOptions = $(".price_list").children('li:not(.init)');
+// Reacting on ul list li clicks; taking the value from the li; value have two parts - first, *last price* and *today price* - this two values separated by "#" symbol; method takes first and second price and assigns it to the element
+
     $(".price_list>li").on("click", function(e) {
 
         supe=$(this).attr("value").substring(0,($(this).attr("value")).indexOf('#'));
@@ -33,11 +41,15 @@ $(document).ready(function(){
         e.stopPropagation(e);
     });
 
+// On outside ONclick reaction - hiding our tab on click
+
     $(document).click(function(e){
         if (clicks==1){
             $(".price_list").addClass("none");
             clicks=0;
         }
     })
+
+//--------------down_float_menu(project-line-main)-----------------------
 
 });
