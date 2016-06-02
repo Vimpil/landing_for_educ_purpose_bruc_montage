@@ -2395,6 +2395,6 @@ li.init { cursor: pointer; }
     opacity: 0.5;
     height: 100%;
 }
-div#house.tab-pane.fade{
+.tab-pane.fade{
     margin-top:14px;
 }
