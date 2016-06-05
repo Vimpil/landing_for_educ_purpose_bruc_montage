@@ -37,3 +37,8 @@
 .ie8 .tab-shadow{
 	background: #404040;
 }
+.ie8 .cover{
+	-moz-opacity: 0.50;
+	opacity:.50;
+	filter: alpha(opacity=50);
+}

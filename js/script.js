@@ -168,8 +168,14 @@ $(document).ready(function() {
     $(".price_list>li").on("click", function(e) {
 
         $("#price_signboard").text($(this).text());
-        supe=$(this).attr("value").substring(0,($(this).attr("value")).indexOf('#'));
-        price=$(this).attr("value").substring(($(this).attr("value")).indexOf('#')+1, $(this).attr("value").length);
+        console.log("1");
+        console.log($("#price_signboard").text($(this).text()));
+        supe=$(this).attr("price_val").substring(0,($(this).attr("price_val")).indexOf('#'));
+        console.log("2");
+        console.log($(this).attr("price_val").substring(0,($(this).attr("price_val")).indexOf('#')));
+        price=$(this).attr("price_val").substring(($(this).attr("price_val")).indexOf('#')+1, $(this).attr("price_val").length)+" "+'<span class="rubl">a</span>';
+        console.log("3");
+        console.log($(this).attr("price_val").substring(($(this).attr("price_val")).indexOf('#')+1, $(this).attr("price_val").length));
         $(".supe").empty();
         $(".supe").append(supe);
         $(".price").empty();
@@ -253,67 +259,61 @@ $(document).ready(function() {
     var p =$(".menu-row ol");
 
 //counting screen length to menu from the top
-    var project_line_main=0;
-    var project_line_second=0;
+    var project_line_1=0; //var for first menu click counts
+    var project_line_2=0; //var for second menu click couns
     var offset= p.offset();
     var amountScrolled = offset.top;
     var upper_clicks = 0;
 
 //when scrolled amount bigger than position of row menu - float_menu become visible
 
-    $(window).scroll(function() {
+    $(window).scroll(function(e) {
         if ($(window).scrollTop() > amountScrolled) {
 
             $('.fix-menu').removeClass('none');
+            $('div.fluid-container.items-row').addClass('none');
 
-            if (project_line_main = 1) {
-                $('#project-line-main').addClass('none');
-                project_line_main = 0
+            // checking on second part of screen-scrolling and hiding menu
+            if(project_line_1==1){
+                $("div.fluid-container.project-row").addClass("none");
+                project_line_1=0;
             }
 
-            if (project_line_second = 1) {
-                $('div.fluid-container.project-row').addClass('none');
-                project_line_second = 0
-            }
-
-            $("#project-button").click(function () {
-                if (project_line_main = 1) {
-                    $("#project-line-main").removeClass("none");
-                    project_line_main = 0
-                } else {
-                    $("#project-line-main").addClass("none");
-                    project_line_main = 1
-                }
-            })
         } else {
 
-            if(upper_clicks==1) {
-                $('div.fluid-container.items-row').addClass('none');
-                upper_clicks=0;
-            }
             $('.fix-menu').addClass('none');
+
+            // checking on first part of screen-scrolling and hiding menu
+            if(project_line_2==1){
+                $("div.fluid-container.project-row").addClass("none");
+                project_line_2=0;
+            }
         }
     })
 
 //show addit menu on click
 
-    $("div.button-menu").click(function () {
-        if (upper_clicks == 0) {
-            $('div.fluid-container.items-row').removeClass('none');
-            upper_clicks = 1;
-        } else {
-            $('div.fluid-container.items-row').addClass('none');
-            upper_clicks = 0;
+    $("a#project-button").click(function () {
+        if(project_line_1==0) {
+            $("div.fluid-container.project-row").removeClass("none");
+            project_line_1 = 1;
+        }else {
+            $("div.fluid-container.project-row").addClass("none");
+            project_line_1 = 0;
         }
+    })
+
+    $("div.button-menu").click(function () {
+            $('div.fluid-container.items-row').toggleClass('none');
     });
 
     $("#project-button-fix").click(function () {
-        if (project_line_second = 1) {
+        if(project_line_2==0) {
             $("div.fluid-container.project-row").removeClass("none");
-            project_line_second = 0
-        } else {
+            project_line_2 = 1;
+        }else {
             $("div.fluid-container.project-row").addClass("none");
-            project_line_second = 1
+            project_line_2 = 0;
         }
         return false;
     })
@@ -332,7 +332,6 @@ $(document).ready(function() {
                 }
             }
         })
-        return false;
     })
 
 

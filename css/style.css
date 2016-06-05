@@ -2142,7 +2142,7 @@ span.cat-floor {
 .supe {
     display: inline-block;
     background: url(../images/lol.png);
-    background-size: 100% 100%;
+    background-size: 100%;
     font-size: 16px;
     line-height: 16px;
     color: #404040;
@@ -2385,6 +2385,7 @@ li.init { cursor: pointer; }
     -moz-opacity: 1.0;
     filter: alpha(opacity=100);
 }
+
 .cover{
     cursor:pointer;
     box-shadow: 0 0 3px black, inset 0 0 3px black;
@@ -2394,7 +2395,4 @@ li.init { cursor: pointer; }
     position:absolute;
     opacity: 0.5;
     height: 100%;
-}
-.tab-pane.fade{
-    margin-top:14px;
 }
